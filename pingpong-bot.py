@@ -33,7 +33,7 @@ intents.messages = True  # Enable message intents
 intents.message_content = True  # Allow content analysis
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-allowedUsers = {242816688129572864, 139114165523447809, 125405105024532480}
+allowedUsers = {204659941892554752, 139114165523447809}
 
 @bot.event
 async def on_message(message):
@@ -52,7 +52,7 @@ async def on_ready():
     print(f"Logged in as {bot.user}")
 
 @bot.command()
-async def hello(ctx):
+async def pinghello(ctx):
     await ctx.send(":smile:")
 
 bot.run(TOKEN)
