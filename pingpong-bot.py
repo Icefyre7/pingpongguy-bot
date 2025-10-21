@@ -33,7 +33,7 @@ intents.messages = True  # Enable message intents
 intents.message_content = True  # Allow content analysis
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-allowedUsers = {204659941892554752, 139114165523447809, 160847221582069761, 146387314392825857}
+allowedUsers = {204659941892554752, 139114165523447809, 160847221582069761, 146387314392825857, 249972407236952064}
 
 @bot.event
 async def on_message(message):
