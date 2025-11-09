@@ -33,7 +33,8 @@ intents.messages = True  # Enable message intents
 intents.message_content = True  # Allow content analysis
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-allowedUsers = {204659941892554752, 139114165523447809, 160847221582069761, 146387314392825857, 249972407236952064}
+allowedUsers = {204659941892554752, 139114165523447809, 160847221582069761, 146387314392825857, 249972407236952064, 129343123255066624}
+memeUser = 125405105024532480
 
 @bot.event
 async def on_message(message):
@@ -43,6 +44,9 @@ async def on_message(message):
 
     if message.author.id in allowedUsers and message.content.lower() == "ping":
         await message.channel.send("pong")
+
+    if message.author.id == memeUser and message.content.lower() == "ping":
+        await message.channel.send("🖕")
 
     # Allow other commands to still work
     await bot.process_commands(message)
