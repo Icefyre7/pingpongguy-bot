@@ -45,7 +45,7 @@ async def on_message(message):
     if message.author.id in allowedUsers and message.content.lower() == "ping":
         await message.channel.send("pong")
 
-    if message.author.id == memeUser and message.content.lower() == "ping":
+    elif message.author.id == memeUser and message.content.lower() == "ping":
         await message.channel.send("🖕")
 
     # Allow other commands to still work
